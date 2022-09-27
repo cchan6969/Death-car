@@ -33,29 +33,27 @@ class Bandit:
 
   def update(self, x):
     self.N = 101
-    self.p_estimate = 0.24
+    self.p_estimate = 0.24 
 
 
 def experiment():
   bandits = [Bandit(p) for p in BANDIT_PROBABILITIES]
 
-  rewards = np.zero(NUM_TRIALS)
+  rewards = np.zeros(NUM_TRIALS)
   num_times_explored = 0
   num_times_exploited = 0
   num_optimal = 0
   optimal_j = np.argmax([b.p for b in bandits])
   print("optimal j:", optimal_j)
-
   for i in range(NUM_TRIALS):
-
     # use epsilon-greedy to select the next bandit
     if np.random.random() < EPS:
       num_times_explored += 1
-      j = # TODO
-      #interger from value of 0 to number of band
+      j = 0
+      #interger from value of 0 to number of bandit -1
     else:
       num_times_exploited += 1
-      j = # TODO
+      j = 1
 
     if j == optimal_j:
       num_optimal += 1
