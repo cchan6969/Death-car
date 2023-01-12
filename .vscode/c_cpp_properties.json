@@ -5,8 +5,8 @@
             "name": "Win32",
             "includePath": 
             [
-                "C:\\Users\\chanc\\OneDrive\\Documents\\Arduino\\libraries\\Adafruit_NeoPixel\\**",
-                "C:\\Users\\chanc\\OneDrive\\Documents\\Arduino\\libraries\\ArduinoJson\\src\\**"
+                "C:\\Users\\chanc\\Documents\\Arduino\\libraries\\Adafruit_NeoPixel\\**",
+                "C:\\Users\\chanc\\Documents\\Arduino\\libraries\\ArduinoJson\\src\\**"
             ],
             "defines": 
             [
@@ -19,8 +19,8 @@
             {
                 "path": 
                 [
-                    "C:\\Users\\chanc\\OneDrive\\Documents\\Arduino\\libraries\\Adafruit_NeoPixel\\**",
-                    "C:\\Users\\chanc\\OneDrive\\Documents\\Arduino\\libraries\\ArduinoJson\\src\\**"
+                    "C:\\Users\\chanc\\Documents\\Arduino\\libraries\\Adafruit_NeoPixel\\**",
+                    "C:\\Users\\chanc\\Documents\\Arduino\\libraries\\ArduinoJson\\src\\**"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
@@ -28,4 +28,4 @@
         }
     ],
     "version": 4
-}
+}   
