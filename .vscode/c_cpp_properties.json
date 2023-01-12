@@ -1,16 +1,30 @@
 {
-    "configurations": [
+    "configurations": 
+    [
         {
             "name": "Win32",
-            "includePath": [
-                "${workspaceFolder}/**"
+            "includePath": 
+            [
+                "C:\\Users\\chanc\\OneDrive\\Documents\\Arduino\\libraries\\Adafruit_NeoPixel\\**",
+                "C:\\Users\\chanc\\OneDrive\\Documents\\Arduino\\libraries\\ArduinoJson\\src\\**"
             ],
-            "defines": [
+            "defines": 
+            [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            "intelliSenseMode": "windows-msvc-x64"
+            "intelliSenseMode": "windows-msvc-x64",
+            "browse":
+            {
+                "path": 
+                [
+                    "C:\\Users\\chanc\\OneDrive\\Documents\\Arduino\\libraries\\Adafruit_NeoPixel\\**",
+                    "C:\\Users\\chanc\\OneDrive\\Documents\\Arduino\\libraries\\ArduinoJson\\src\\**"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
         }
     ],
     "version": 4
