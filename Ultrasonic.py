@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 import serial 
+import json
 # Import Serial Library
 if __name__ == '__main__':
 # It allows you to execute code when the file runs as a script, but not when it is imported as a module
-    ser = serial.Serial('COM3', 9600, timeout=1) 
+    ser = serial.Serial('COM4', 9600, timeout=1) 
     # .Serial('Serial Device Name', bandrate on Arduino, timeout timer in seconds)
     ser.reset_input_buffer()
     # It flushes any byte that could already be in the input buffer at that point, 
@@ -16,4 +17,7 @@ if __name__ == '__main__':
             # decode() decodes the incoming byte message from serial
             # utf-8 converts byte to string
             # rstrip() function is specific to strings, it allows you to remove any trailing characters (newline, carriage return)
-            print(line)
+            #print(type(line))
+            data = json.loads(line)
+            print(data)
+            #print(type(data))
