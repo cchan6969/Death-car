@@ -26,6 +26,9 @@ int initPin3 =18;
 int distance3 =0;
 
 int piezo = 6;
+int stop = 0;
+int stopdist = 5;
+
 void setup() 
 {
   NeoPixel.begin(); // INITIALIZE NeoPixel strip object (REQUIRED)
@@ -46,21 +49,21 @@ void loop()
   int pixel;
   
   distance1 = getDistance(initPin1, echoPin1);
-  printDistance(1, distance1);
+  printDistance(1, distance1, stop);
   //Serial.println(distance1);
   delay(150);
   
   distance2 = getDistance(initPin2, echoPin2);
-  printDistance(2, distance2);
+  printDistance(2, distance2, stop);
   //Serial.println(distance2);
   delay(150);
   
   distance3 = getDistance(initPin3, echoPin3);
-  printDistance(3, distance3);
+  printDistance(3, distance3, stop);
   //Serial.println(distance3);
   delay(150);
   
-  if (distance1 <= 3 || distance2 <0 || distance3 <= 3)
+  if (distance1 <= stopdist || distance2 <0 || distance3 <= stopdist)
   {
    for (int pixel = 0; pixel < NUM_PIXELS; pixel++) 
    // For loop to turn on each pixel
@@ -73,11 +76,13 @@ void loop()
    }
    NeoPixel.show();
    tone(piezo, 15000, 500);
+   stop = 1;
   }
   else 
   {
     NeoPixel.clear();
     NeoPixel.show();
+    stop = 0;
   }
 }
 
@@ -91,7 +96,7 @@ int getDistance (int initPin, int echoPin)
   return distance;
 }
 
-void printDistance(int id, int dist)
+void printDistance(int id, int dist, int stop)
 {
   /*
   Serial.print(id);
@@ -101,6 +106,7 @@ void printDistance(int id, int dist)
   */
   doc["sensor"] = id;
   doc["distance"] = dist;
+  doc["stop"] = stop;
   serializeJsonPretty(doc, Serial);
 }
 
