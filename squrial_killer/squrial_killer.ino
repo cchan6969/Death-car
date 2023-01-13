@@ -75,7 +75,9 @@ void loop()
     // .setBrightness takes in a value from 0 to 255
    }
    NeoPixel.show();
-   tone(piezo, 15000, 500);
+   tone(piezo, 15000, 100);
+   delay(200);
+   tone(piezo, 5000, 100);
    stop = 1;
   }
   else 
@@ -98,15 +100,15 @@ int getDistance (int initPin, int echoPin)
 
 void printDistance(int id, int dist, int stop)
 {
-  /*
-  Serial.print(id);
-  Serial.print(": ");
-  Serial.print(dist);
-  Serial.print(" cm");  
-  */
-  doc["sensor"] = id;
-  doc["distance"] = dist;
-  doc["stop"] = stop;
-  serializeJsonPretty(doc, Serial);
+  
+  Serial.println(id);
+  //Serial.print(": ");
+  Serial.println(stop);
+  Serial.println(dist);
+  //Serial.print(" cm");  
+  // doc[""] = id;
+  // doc[""] = dist;
+  // doc[""] = stop;
+  // serializeJsonPretty(doc, Serial);
 }
 
