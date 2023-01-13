@@ -7,14 +7,14 @@
             [
                 "C:\\Users\\chanc\\Documents\\Arduino\\libraries\\**"
             ],
-            "compilerPath": "",
+            /*"compilerPath": "C:\\MinGW\\bin\\**",*/
             "defines": 
             [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            "intelliSenseMode": "windows-msvc-x64",
+            "intelliSenseMode": "${default}",
             "browse":
             {
                 "path": 
