@@ -75,9 +75,9 @@ void loop()
     // .setBrightness takes in a value from 0 to 255
    }
    NeoPixel.show();
-   tone(piezo, 15000, 100);
+   tone(piezo, 5274.04 , 100);
    delay(200);
-   tone(piezo, 5000, 100);
+   tone(piezo, 2093.00 , 100);
    stop = 1;
   }
   else 
