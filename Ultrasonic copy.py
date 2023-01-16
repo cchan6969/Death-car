@@ -20,6 +20,7 @@ def import_dict(count,arduinoDict,arduinoList):
         # rstrip() function is specific to strings, it allows you to remove any trailing characters (newline, carriage return)
         arduinoList.append(line)
         count+=1
+        print(count)
     arduinoDict['Dist'] = arduinoList[0]
     arduinoDict['Stop'] = arduinoList[1]
     arduinoDict['Sensor'] = arduinoList[2]

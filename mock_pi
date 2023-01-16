@@ -1,3 +1,7 @@
 import Ultrasonic
-sens_data=Ultrasonic.sensoring(arduino_dict)
-print(sens_data)
+
+while True:
+    #Infinite loop
+    sens_data=Ultrasonic.sensoring()
+
+    print(sens_data)

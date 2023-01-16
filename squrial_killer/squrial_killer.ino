@@ -40,8 +40,8 @@ void setup()
   pinMode(initPin3, OUTPUT);
   pinMode(echoPin3, INPUT);
   pinMode(5, OUTPUT);
+
   Serial.begin(9600);
-  
 }
 
 void loop() 
@@ -75,9 +75,12 @@ void loop()
     // .setBrightness takes in a value from 0 to 255
    }
    NeoPixel.show();
-   tone(piezo, 5274.04 , 100);
-   delay(200);
-   tone(piezo, 2093.00 , 100);
+   // siren
+   //   for(int i=300; i<10000; i++)
+   //   {tone(piezo, i , 10);}
+   //tone(piezo, 392 , 100);
+   //delay(200);
+   //tone(piezo, 7902.13 , 100);
    stop = 1;
   }
   else 
@@ -93,17 +96,20 @@ int getDistance (int initPin, int echoPin)
   digitalWrite(initPin, HIGH);
   delayMicroseconds(10); 
   digitalWrite(initPin, LOW); 
+
   unsigned long pulseTime = pulseIn(echoPin, HIGH); 
   int distance = pulseTime/58;
+
   return distance;
 }
 
 void printDistance(int id, int dist, int stop)
 {
-  Serial.println(id);
-  Serial.println(dist);
+  Serial.print(id);
+  Serial.print(",");
+  Serial.print(dist);
+  Serial.print(",");
   Serial.println(stop);
-  
   
   //Serial.print(" cm");
   //Serial.print(": ");  
