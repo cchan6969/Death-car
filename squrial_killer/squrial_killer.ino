@@ -100,12 +100,13 @@ int getDistance (int initPin, int echoPin)
 
 void printDistance(int id, int dist, int stop)
 {
-  
   Serial.println(id);
-  //Serial.print(": ");
-  Serial.println(stop);
   Serial.println(dist);
-  //Serial.print(" cm");  
+  Serial.println(stop);
+  
+  
+  //Serial.print(" cm");
+  //Serial.print(": ");  
   // doc[""] = id;
   // doc[""] = dist;
   // doc[""] = stop;

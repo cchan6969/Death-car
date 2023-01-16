@@ -9,7 +9,7 @@ count=0
 # Import Serial Library
 if __name__ == '__main__':
 # It allows you to execute code when the file runs as a script, but not when it is imported as a module
-    ser = serial.Serial('COM3', 9600, timeout=1) 
+    ser = serial.Serial('COM4', 9600, timeout=1) 
     # .Serial('Serial Device Name', bandrate on Arduino, timeout timer in seconds)
     ser.reset_input_buffer()
     # It flushes any byte that could already be in the input buffer at that point, 
@@ -28,12 +28,18 @@ if __name__ == '__main__':
             #print(int(line))
             arduinoList.append(line)
             count+=1
-        arduinoDict['Sensor'] = arduinoList[0]
-        arduinoDict['Dist'] = arduinoList[1]
-        arduinoDict['Stop'] = arduinoList[2]
-        print(arduinoDict)
-        # Send data to jetson
+        print(arduinoList)
+        #arduinoDict['Stop'] = arduinoList[0]
+        #arduinoDict['Sensor'] = arduinoList[1]
+        #arduinoDict['Dist'] = arduinoList[2]
+        
+        #print(arduinoDict)
+        # Send data to Pi
+        sensor1 = arduinoDict.get("Sensor")
+        sensor2 = arduinoDict.get("Dist")
+        sensor3 = arduinoDict.get("Stop")
 
+        
 
         # Reset
         arduinoList = []

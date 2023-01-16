@@ -1,0 +1,3 @@
+import Ultrasonic
+sens_data=Ultrasonic.sensoring(arduino_dict)
+print(sens_data)
