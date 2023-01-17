@@ -1,6 +1,8 @@
 import Ultrasonic
-
 while True:
     #Infinite loop
-    sens_data=Ultrasonic.sensoring()
-    print(sens_data)
+    a=Ultrasonic.sensoring()
+    b=a[0]
+    c=a[1]
+    print(c)
+    print(type(c))
