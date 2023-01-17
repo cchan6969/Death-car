@@ -3,6 +3,9 @@ while True:
     #Infinite loop
     a=Ultrasonic.sensoring()
     b=a[0]
+    #stop value
     c=a[1]
-    print(c)
-    print(type(c))
+    #data dictionary
+    if b == 1:
+        print('stop')
+    
