@@ -1,4 +1,3 @@
-#include <Arduino.h>
 /*
 CODE HERE
 Array of HC-SR04 ultrasonic sensors
@@ -78,15 +77,17 @@ void loop()
    NeoPixel.show();
    // siren
    //   for(int i=300; i<10000; i++)
-   //   {tone(piezo, i , 10);}
-   //tone(piezo, 392 , 100);
-   //delay(200);
-   //tone(piezo, 7902.13 , 100);
+   //   {
+   //     tone(piezo, i , 10);
+   //   }
+   //
+   tone(piezo, 392 , 100);
+   delay(200);
+   tone(piezo, 7902.13 , 100);
    stop = 1;
   }
   else 
   {
-    NeoPixel.clear();
     NeoPixel.show();
     stop = 0;
   }
