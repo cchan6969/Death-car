@@ -9,6 +9,6 @@ while True:
     #does not stop steering or backwards 
     sensorDict=a[1]
     #data dictionary for GUI on Pi
-    if b == 1:
+    if sensorStop == 1:
         print('stop')
     
